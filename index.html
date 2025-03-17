@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - App Inatel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="theme1">
+    <div class="container">
+        <header class="header">
+            <div class="icon menu-icon" onclick="toggleMenu()">☰</div>
+            <span class="logo">Inatel App</span>
+            <div class="icon"></div>
+        </header>
+        <nav id="theme-menu" class="hidden">
+            <button onclick="changeTheme('theme1')">Tema 1</button>
+            <button onclick="changeTheme('theme2')">Tema 2</button>
+        </nav>
+        <section class="mensagens">
+            <h2>Olá, Caio</h2>
+            <div class="mensagem">Você possui um armário reservado com entrega para hoje...</div>
+            <div class="mensagem">Você possui uma pendência no financeiro...</div>
+        </section>
+        <main class="aulas">
+            <div class="aula">
+                <h3>Disciplina</h3>
+                <p>Sala e Horário</p>
+                <div class="icons">📚</div>
+            </div>
+            <div class="aula">
+                <h3>Disciplina</h3>
+                <p>Sala e Horário</p>
+                <div class="icons">📚</div>
+            </div>
+            <div class="aula">
+                <h3>Disciplina</h3>
+                <p>Sala e Horário</p>
+                <div class="icons">📚</div>
+            </div>
+        </main>
+
+        <!-- Seção de Notícias com Carrossel -->
+        <section class="noticias">
+            <h2>Notícias Recentes</h2>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <!-- Os cards serão inseridos dinamicamente via JS -->
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

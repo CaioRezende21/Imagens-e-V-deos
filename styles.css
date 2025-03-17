@@ -1,0 +1,197 @@
+/* Reset padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arimo', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 16px;
+}
+
+.container {
+    width: 100%;
+    max-width: 414px;
+    display: grid;
+    gap: 16px;
+}
+
+/* Estilização do Cabeçalho */
+.header {
+    display: flex;
+    justify-content: space-between;
+    background: #0047ab;  /* Azul do Inatel */
+    padding: 16px;
+    border-radius: 8px;
+    position: relative;
+    z-index: 10;
+    color: white;
+}
+
+.menu-icon {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+#theme-menu {
+    position: absolute;
+    top: 60px;
+    right: 16px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 8px;
+    z-index: 9;
+}
+
+#theme-menu button {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin: 4px 0;
+    background: #ffcc00; /* Amarelo do Inatel */
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+#theme-menu button:hover {
+    background: #e6b800;
+}
+
+/* Seção de Mensagens */
+.mensagens {
+    background: var(--mensagens-bg);
+    padding: 16px;
+    border-radius: 8px;
+}
+
+/* Seção das Aulas */
+.aulas {
+    background: var(--aulas-bg);
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.aula {
+    background: white;
+    margin: 8px 0;
+    padding: 16px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Seção de Notícias */
+.noticias {
+    background: var(--noticias-bg);
+    padding: 16px;
+    border-radius: 8px;
+}
+
+/* Estilização do Carrossel */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto; /* Adiciona a barra de rolagem horizontal */
+    scroll-snap-type: x mandatory; /* Garante que a rolagem pare em cada card */
+    -webkit-overflow-scrolling: touch; /* Para rolagem suave em dispositivos iOS */
+    transition: transform 0.5s ease-in-out;
+    scrollbar-width: thin; /* Para navegadores Firefox */
+    scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.1); /* Para navegadores Firefox */
+}
+
+/* Estilização da barra de rolagem para navegadores baseados em WebKit (Chrome, Safari) */
+.carousel::-webkit-scrollbar {
+    height: 8px;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+}
+
+.carousel::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.card {
+    flex: 0 0 100%;
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    scroll-snap-align: start; /* Garante que cada card se alinhe ao início */
+}
+
+.card img {
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.info {
+    text-align: left;
+}
+
+h3 {
+    font-family: "Arimo", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--cor-text);
+    margin-bottom: 5px;
+}
+
+p {
+    font-family: "Arimo", sans-serif;
+    font-size: 12px;
+    color: var(--cor-text);
+    line-height: 1.5;
+}
+
+/* Temas */
+:root {
+    --mensagens-bg: #ff99cc;      /* Mensagens com um fundo suave */
+    --aulas-bg: #99ff99;          /* Aulas com fundo verde suave */
+    --noticias-bg: #cccccc;       /* Notícias com fundo cinza claro */
+    --cor-text: #333;
+}
+
+.theme1 {
+    --mensagens-bg: #ff99cc;
+    --aulas-bg: #99ff99;
+    --noticias-bg: #cccccc;
+}
+
+.theme2 {
+    --mensagens-bg: #ffcc99;
+    --aulas-bg: #99ccff;
+    --noticias-bg: #cc99ff;
+}
+
+footer {
+    background: #f1f1f1;
+    padding: 16px;
+    text-align: center;
+}
+
+.svg_logo_inatel {
+    width: 150px;
+}
